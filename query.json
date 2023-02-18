@@ -33,6 +33,9 @@
             "name":"Average EC2 Instance Metric CPU Utilization Hourly",
             "query":"steampipe query 'select avg(average) from aws.aws_ec2_instance_metric_connections_hourly' --output json"
         },{
+            "name":"Total EC2 Instance Metric CPU Utilization Hourly",
+            "query":"steampipe query 'select sum(average) from aws.aws_ec2_instance_metric_connections_hourly' --output json"
+        },{
             "name":"More than Average EC2 Instance Metric CPU Utilization Hourly",
             "query":"steampipe query 'select * from aws.aws_ec2_instance_metric_connections_hourly where average>(select avg(average) from aws.aws_ec2_instance_metric_connections_hourly)' --output json"
         },{
