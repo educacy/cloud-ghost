@@ -87,6 +87,6 @@
         },{
             "name":"Default Service Quota",
             "query":"steampipe query 'select * from aws_servicequotas_default_service_quota' --output json"
-        }
+        }]
     }
 }
