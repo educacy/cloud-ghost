@@ -1,12 +1,29 @@
 {
     "module":{
         "Database Optimization":[{
+            "name":"DB Instance Metric Connections Hourly",
+            "query":"steampipe query 'select * from aws.aws_rds_db_instance_metric_connections_hourly' --output json"
+        },{
             "name":"DB Instance Metric Connections Daily",
-            "query": "" 
+            "query": "steampipe query 'select * from aws.aws_rds_db_instance_metric_connections_daily' --output json" 
         },{
-
+            "name":"DB Instance Metric CPU Utilization Hourly",
+            "query":"steampipe query 'select * from aws.aws_rds_db_instance_metric_cpu_utilization_hourly' --output json"
         },{
-
+            "name":"DB Instance Metric CPU Utilization Daily",
+            "query":"steampipe query 'select * from aws.aws_rds_db_instance_metric_cpu_utilization_daily' --output json"
+        },{
+            "name":"DB Instance Metric Read Input-Output per second Hourly"
+            "query":"steampipe query 'select * from aws.aws_rds_db_instance_metric_read_iops_hourly' --output json"
+        },{
+            "name":"DB Instance Metric Read Input-Output per second Daily"
+            "query":"steampipe query 'select * from aws.aws_rds_db_instance_metric_read_iops_daily' --output json"
+        },{
+            "name":"DB Instance Metric Write Input-Output per second Hourly"
+            "query":"steampipe query 'select * from aws.aws_rds_db_instance_metric_write_iops_hourly' --output json"
+        },{
+            "name":"DB Instance Metric Write Input-Output per second Daily"
+            "query":"steampipe query 'select * from aws.aws_rds_db_instance_metric_write_iops_daily' --output json"
         }]
     }
 }
