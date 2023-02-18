@@ -80,5 +80,13 @@
             "name":"Cost By Forecast Monthly",
             "query":"steampipe query 'select * from aws.aws_cost_by_forecast_monthly' --output json"
         }]
+    },{
+        "Current Status":[{
+            "name":"Service Quota",
+            "query":"steampipe query 'select * from aws_servicequotas_service_quota' --output json"
+        },{
+            "name":"Default Service Quota",
+            "query":"steampipe query 'select * from aws_servicequotas_default_service_quota' --output json"
+        }
     }
 }
