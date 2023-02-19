@@ -63,11 +63,11 @@ module.exports = {
                             // Post sign up response, we check if it was successful
                             if (response.status === "OK") {
                                 let { id, email } = response.user;
-                                user = await prisma.users.create({
+                                user = await prisma.user.create({
                                     data:{
-                                        id: id,
-                                        email: email,
-                                        // name: input.formFields.name,
+                                        id,
+                                        email,
+                                        name: "Enter your Name"
                                     }
                                 })
                                 // // These are the input form fields values that the user used while signing up
